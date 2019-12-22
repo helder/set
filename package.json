@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "lix run travix run node",
+    "postinstall": "lix download"
+  },
+  "dependencies": {
+    "lix": "^15.6.0-alpha.4"
+  }
+}

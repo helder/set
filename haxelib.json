@@ -1,0 +1,14 @@
+{
+  "name": "set",
+  "license": "MIT",
+  "tags": [
+    "set"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "benmerckx"
+  ],
+  "releasenote": "initial release",
+  "version": "0.0.0",
+  "dependencies": {}
+}

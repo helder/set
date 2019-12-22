@@ -1,0 +1,25 @@
+sudo: required
+dist: trusty
+
+language: node_js
+node_js: 10
+
+os:
+  - linux
+  - osx
+
+install:
+  - yarn
+
+script:
+  - yarn lix run travix interp
+  - yarn lix run travix neko
+  - yarn lix run travix python
+  - yarn lix run travix node
+  - yarn lix run travix js
+  - yarn lix run travix flash
+  - yarn lix run travix java
+  - yarn lix run travix cpp
+  - yarn lix run travix cs
+  - yarn lix run travix php7
+  - yarn lix run travix lua
