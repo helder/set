@@ -36,8 +36,10 @@ class StringSet implements ISet<String> {
   public inline function iterator(): Iterator<String>
     return map.keys();
 
-  public inline function clear(): Void
+  public inline function clear(): Void {
     map.clear();
+    length = 0;
+  }
 
   public inline function copy(): StringSet {
     final copy = new StringSet();

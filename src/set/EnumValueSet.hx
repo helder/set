@@ -36,8 +36,10 @@ class EnumValueSet<V:EnumValue> implements ISet<V> {
   public inline function iterator(): Iterator<V>
     return map.keys();
 
-  public inline function clear(): Void
+  public inline function clear(): Void {
     map.clear();
+    length = 0;
+  }
 
   public inline function copy(): EnumValueSet<V> {
     final copy = new EnumValueSet();

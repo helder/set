@@ -19,6 +19,10 @@ class TestSet {
     set.remove('a');
     asserts.assert(set.length == 1);
     asserts.assert(set.toArray()[0] == 'b');
+    final setCopy = set.copy();
+    set.clear();
+    asserts.assert(set.length == 0);
+    asserts.assert(setCopy.exists('b'));
     return asserts.done();
   }
 
@@ -33,6 +37,10 @@ class TestSet {
     set.remove(1);
     asserts.assert(set.length == 1);
     asserts.assert(set.toArray()[0] == 2);
+    final setCopy = set.copy();
+    set.clear();
+    asserts.assert(set.length == 0);
+    asserts.assert(setCopy.exists(2));
     return asserts.done();
   }
 
@@ -51,6 +59,10 @@ class TestSet {
     set.remove(B(1));
     asserts.assert(set.length == 1);
     asserts.assert(set.toArray()[0] == A);
+    final setCopy = set.copy();
+    set.clear();
+    asserts.assert(set.length == 0);
+    asserts.assert(setCopy.exists(A));
     return asserts.done();
   }
 
@@ -67,6 +79,10 @@ class TestSet {
     set.remove(a);
     asserts.assert(set.length == 1);
     asserts.assert(set.toArray()[0] == b);
+    final setCopy = set.copy();
+    set.clear();
+    asserts.assert(set.length == 0);
+    asserts.assert(setCopy.exists(b));
     return asserts.done();
   }
 
