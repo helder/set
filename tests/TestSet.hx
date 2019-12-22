@@ -23,6 +23,7 @@ class TestSet {
     set.clear();
     asserts.assert(set.length == 0);
     asserts.assert(setCopy.exists('b'));
+    asserts.assert(setCopy.length == 1);
     return asserts.done();
   }
 
@@ -41,6 +42,7 @@ class TestSet {
     set.clear();
     asserts.assert(set.length == 0);
     asserts.assert(setCopy.exists(2));
+    asserts.assert(setCopy.length == 1);
     return asserts.done();
   }
 
@@ -63,6 +65,7 @@ class TestSet {
     set.clear();
     asserts.assert(set.length == 0);
     asserts.assert(setCopy.exists(A));
+    asserts.assert(setCopy.length == 1);
     return asserts.done();
   }
 
@@ -83,6 +86,7 @@ class TestSet {
     set.clear();
     asserts.assert(set.length == 0);
     asserts.assert(setCopy.exists(b));
+    asserts.assert(setCopy.length == 1);
     return asserts.done();
   }
 
