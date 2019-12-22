@@ -5,13 +5,14 @@
 `Set<V>` using a `Map<V, Bool>` implementation.
 
 ```haxe
-interface ISet<V> {
-  var length(default, null): Int;
+abstract Set<V> {
+  final length: Int;
+  function new(?values: Iterable<V>);
   function add(value: V): Void;
   function remove(value: V): Bool;
   function exists(value: V): Bool;
   function iterator(): Iterator<V>;
-  function copy(): ISet<V>;
+  function copy(): Set<V>;
   function toArray(): Array<V>;
   function toString(): String;
   function clear(): Void;
