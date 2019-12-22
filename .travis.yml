@@ -20,3 +20,8 @@ script:
   - yarn lix run travix cs
   - yarn lix run travix php7
   - yarn lix run travix lua
+
+cache:
+  - yarn
+  - directories:
+      - /home/travis/.rvm/
