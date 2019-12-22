@@ -1,3 +1,9 @@
+enum TestEnum {
+  A;
+  B(value: Int);
+  C(value: String);
+}
+
 @:asserts
 class TestSet {
   public function new() {}
@@ -24,6 +30,38 @@ class TestSet {
     asserts.assert(!set.exists(3));
     asserts.assert(set.length == 2);
     set.remove(1);
+    asserts.assert(set.length == 1);
+    return asserts.done();
+  }
+
+  public function testEnumValueSet() {
+    final set: Set<TestEnum> = new Set();
+    set.add(A);
+    set.add(B(1));
+    set.add(C('c'));
+    asserts.assert(set.exists(A));
+    asserts.assert(set.exists(B(1)));
+    asserts.assert(!set.exists(B(2)));
+    asserts.assert(set.exists(C('c')));
+    asserts.assert(set.length == 3);
+    set.remove(C('c'));
+    asserts.assert(set.length == 2);
+    set.remove(B(1));
+    asserts.assert(set.length == 1);
+    return asserts.done();
+  }
+
+  public function testObjectSet() {
+    final set: Set<{}> = new Set();
+    final a = {}
+    final b = {}
+    set.add(a);
+    set.add(b);
+    asserts.assert(set.exists(a));
+    asserts.assert(set.exists(b));
+    asserts.assert(!set.exists({}));
+    asserts.assert(set.length == 2);
+    set.remove(a);
     asserts.assert(set.length == 1);
     return asserts.done();
   }
