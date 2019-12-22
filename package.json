@@ -1,9 +1,11 @@
 {
   "scripts": {
+    "submit": "bestzip submit.zip src/* haxelib.json readme.md && haxelib submit submit.zip && rm submit.zip",
     "test": "lix run travix run node",
     "postinstall": "lix download"
   },
-  "dependencies": {
-    "lix": "^15.6.0-alpha.4"
+  "devDependencies": {
+    "lix": "^15.6.0-alpha.4",
+    "bestzip": "^2.1.5"
   }
 }
