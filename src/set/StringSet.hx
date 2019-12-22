@@ -5,9 +5,15 @@ class StringSet implements ISet<String> {
 
   var map: Map<String, Bool>;
 
-  public inline function new() {
+  public inline function new(?values: Iterable<String>) {
     map = new Map();
     length = 0;
+    switch values {
+      case null:
+      case it:
+        for (v in it)
+          add(v);
+    }
   }
 
   public inline function add(v: String): Void {

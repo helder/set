@@ -2,7 +2,7 @@ import set.*;
 
 @:multiType(@:followWithAbstracts V)
 abstract Set<V>(ISet<V>) {
-  public function new();
+  public function new(?values: Iterable<V>);
 
   public var length(get, never): Int;
 
@@ -33,31 +33,28 @@ abstract Set<V>(ISet<V>) {
   public inline function toArray<V>(): Array<V>
     return this.toArray();
 
-  @:to static inline function toStringSet<V: String>(t: ISet<V>): StringSet {
-    return new StringSet();
-  }
+  @:to static inline function toStringSet<V: String>(t: ISet<V>,
+      ?values: Iterable<String>): StringSet
+    return new StringSet(values);
 
-  @:to static inline function toIntSet<V: Int>(t: ISet<V>): IntSet {
-    return new IntSet();
-  }
+  @:to static inline function toIntSet<V: Int>(t: ISet<V>,
+      ?values: Iterable<Int>): IntSet
+    return new IntSet(values);
 
-  @:to static inline function toEnumValueSet<V: EnumValue>(t: ISet<V>): EnumValueSet<V> {
-    return new EnumValueSet<V>();
-  }
+  @:to static inline function toEnumValueSet<V: EnumValue>(t: ISet<V>,
+      ?values: Iterable<V>): EnumValueSet<V>
+    return new EnumValueSet<V>(values);
 
-  @:to static inline function toObjectSet<V: {}>(t: ISet<V>): ObjectSet<V> {
-    return new ObjectSet<V>();
-  }
+  @:to static inline function toObjectSet<V: {}>(t: ISet<V>,
+      ?values: Iterable<V>): ObjectSet<V>
+    return new ObjectSet<V>(values);
 
-  @:from static inline function fromStringSet<V>(set: StringSet): Set<String> {
-    return cast set;
-  }
+  @:from static inline function fromStringSet<V>(set: StringSet): Set<String>
+    return set;
 
-  @:from static inline function fromIntSet<V>(set: IntSet): Set<Int> {
-    return cast set;
-  }
+  @:from static inline function fromIntSet<V>(set: IntSet): Set<Int>
+    return set;
 
-  @:from static inline function fromObjectSet<V: {}>(set: ObjectSet<V>): Set<V> {
-    return cast set;
-  }
+  @:from static inline function fromObjectSet<V: {}>(set: ObjectSet<V>): Set<V>
+    return set;
 }

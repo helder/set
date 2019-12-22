@@ -5,9 +5,15 @@ class EnumValueSet<V:EnumValue> implements ISet<V> {
 
   var map: Map<V, Bool>;
 
-  public inline function new() {
+  public inline function new(?values: Iterable<V>) {
     map = new Map();
     length = 0;
+    switch values {
+      case null:
+      case it:
+        for (v in it)
+          add(v);
+    }
   }
 
   public inline function add(v: V): Void {

@@ -69,4 +69,11 @@ class TestSet {
     asserts.assert(set.toArray()[0] == b);
     return asserts.done();
   }
+
+  public function testConstructorValues() {
+    final set = new Set([1, 2]);
+    asserts.assert(set.exists(1));
+    asserts.assert(set.exists(2));
+    return asserts.done();
+  }
 }
