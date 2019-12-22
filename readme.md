@@ -1,5 +1,7 @@
 # set
 
+[![Build Status](https://travis-ci.com/benmerckx/set.svg?branch=master)](https://travis-ci.com/benmerckx/set)
+
 `Set<V>` using a `Map<V, Bool>` implementation.
 
 ```haxe
