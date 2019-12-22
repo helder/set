@@ -18,6 +18,7 @@ class TestSet {
     asserts.assert(set.length == 2);
     set.remove('a');
     asserts.assert(set.length == 1);
+    asserts.assert(set.toArray()[0] == 'b');
     return asserts.done();
   }
 
@@ -31,6 +32,7 @@ class TestSet {
     asserts.assert(set.length == 2);
     set.remove(1);
     asserts.assert(set.length == 1);
+    asserts.assert(set.toArray()[0] == 2);
     return asserts.done();
   }
 
@@ -48,6 +50,7 @@ class TestSet {
     asserts.assert(set.length == 2);
     set.remove(B(1));
     asserts.assert(set.length == 1);
+    asserts.assert(set.toArray()[0] == A);
     return asserts.done();
   }
 
@@ -63,6 +66,7 @@ class TestSet {
     asserts.assert(set.length == 2);
     set.remove(a);
     asserts.assert(set.length == 1);
+    asserts.assert(set.toArray()[0] == b);
     return asserts.done();
   }
 }

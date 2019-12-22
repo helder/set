@@ -40,6 +40,9 @@ class IntSet implements ISet<Int> {
     return copy;
   }
 
+  public inline function toArray(): Array<Int>
+    return [for (v in map.keys()) v];
+
   public inline function toString(): String {
     final buf = new StringBuf();
     buf.add('{');

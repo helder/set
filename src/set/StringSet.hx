@@ -40,6 +40,9 @@ class StringSet implements ISet<String> {
     return copy;
   }
 
+  public inline function toArray(): Array<String>
+    return [for (v in map.keys()) v];
+
   public inline function toString(): String {
     final buf = new StringBuf();
     buf.add('{');

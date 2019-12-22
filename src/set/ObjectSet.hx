@@ -40,6 +40,9 @@ class ObjectSet<V:{}> implements ISet<V> {
     return copy;
   }
 
+  public inline function toArray(): Array<V>
+    return [for (v in map.keys()) v];
+
   public inline function toString(): String {
     final buf = new StringBuf();
     buf.add('{');

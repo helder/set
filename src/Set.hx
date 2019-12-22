@@ -30,6 +30,9 @@ abstract Set<V>(ISet<V>) {
   public inline function clear(): Void
     this.clear();
 
+  public inline function toArray<V>(): Array<V>
+    return this.toArray();
+
   @:to static inline function toStringSet<V: String>(t: ISet<V>): StringSet {
     return new StringSet();
   }

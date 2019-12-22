@@ -7,6 +7,7 @@ interface ISet<V> {
   function exists(value: V): Bool;
   function iterator(): Iterator<V>;
   function copy(): ISet<V>;
+  function toArray(): Array<V>;
   function toString(): String;
   function clear(): Void;
 }
