@@ -1,14 +1,11 @@
 {
   "name": "set",
   "license": "MIT",
-  "tags": [
-    "set"
-  ],
+  "tags": ["set"],
   "classPath": "src",
-  "contributors": [
-    "benmerckx"
-  ],
+  "contributors": ["benmerckx"],
   "releasenote": "initial release",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {},
+  "url": "https://github.com/benmerckx/set"
 }
