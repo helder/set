@@ -8,10 +8,10 @@ class ObjectSet<V:{}> implements ISet<V> {
   public var length(get, never): Int;
 
   public inline function new(?values: Iterable<V>) {
-    set = new Set(switch values {
-      case null: null;
-      case it: [for (v in it) v];
-    });
+    set = switch values {
+      case null: new Set();
+      case it: new Set([for (v in it) v]);
+    }
   }
 
   public inline function get_length(): Int

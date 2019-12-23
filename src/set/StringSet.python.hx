@@ -8,10 +8,10 @@ class StringSet implements ISet<String> {
   public var length(get, never): Int;
 
   public inline function new(?values: Iterable<String>) {
-    set = new Set(switch values {
-      case null: null;
-      case it: [for (v in it) v];
-    });
+    set = switch values {
+      case null: new Set();
+      case it: new Set([for (v in it) v]);
+    }
   }
 
   public inline function get_length(): Int
@@ -24,7 +24,8 @@ class StringSet implements ISet<String> {
     return set.has(v);
 
   public inline function remove(v: String): Bool {
-    if (!exists(v)) return false;
+    if (!exists(v))
+      return false;
     set.remove(v);
     return true;
   }

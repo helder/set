@@ -8,7 +8,7 @@ class StringSet implements ISet<String> {
 
   public inline function new(?values: Iterable<String>) {
     map = new Map();
-    length = 0;
+    _length = 0;
     switch values {
       case null:
       case it:
