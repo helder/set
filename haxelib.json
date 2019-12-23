@@ -4,8 +4,8 @@
   "tags": ["set"],
   "classPath": "src",
   "contributors": ["benmerckx"],
-  "releasenote": "Construct with iterable",
-  "version": "0.0.1",
+  "releasenote": "Reset length in clear",
+  "version": "0.0.2",
   "dependencies": {},
   "url": "https://github.com/benmerckx/set"
 }
