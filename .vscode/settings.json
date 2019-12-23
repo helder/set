@@ -1,3 +1,4 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "haxe.configurations": [["tests.hxml", "-js", "bin/dummy.js"]]
 }

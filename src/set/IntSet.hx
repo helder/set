@@ -1,13 +1,14 @@
 package set;
 
 class IntSet implements ISet<Int> {
-  public var length(default, null): Int;
+  public var length(get, never): Int;
 
   var map: Map<Int, Bool>;
+  var _length(default, null): Int;
 
   public inline function new(?values: Iterable<Int>) {
     map = new Map();
-    length = 0;
+    _length = 0;
     switch values {
       case null:
       case it:
@@ -16,10 +17,13 @@ class IntSet implements ISet<Int> {
     }
   }
 
+  public inline function get_length(): Int
+    return _length;
+
   public inline function add(v: Int): Void {
     if (exists(v))
       return;
-    length++;
+    _length++;
     map.set(v, true);
   }
 
@@ -29,7 +33,7 @@ class IntSet implements ISet<Int> {
   public inline function remove(v: Int): Bool {
     if (!exists(v))
       return false;
-    length--;
+    _length--;
     return map.remove(v);
   }
 
@@ -38,12 +42,12 @@ class IntSet implements ISet<Int> {
 
   public inline function clear(): Void {
     map.clear();
-    length = 0;
+    _length = 0;
   }
 
   public inline function copy(): IntSet {
     final copy = new IntSet();
-    copy.length = length;
+    copy._length = _length;
     copy.map = map.copy();
     return copy;
   }

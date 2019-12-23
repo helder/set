@@ -1,9 +1,10 @@
 package set;
 
 class StringSet implements ISet<String> {
-  public var length(default, null): Int;
+  public var length(get, never): Int;
 
   var map: Map<String, Bool>;
+  var _length(default, null): Int;
 
   public inline function new(?values: Iterable<String>) {
     map = new Map();
@@ -16,10 +17,13 @@ class StringSet implements ISet<String> {
     }
   }
 
+  public inline function get_length(): Int
+    return _length;
+
   public inline function add(v: String): Void {
     if (exists(v))
       return;
-    length++;
+    _length++;
     map.set(v, true);
   }
 
@@ -29,7 +33,7 @@ class StringSet implements ISet<String> {
   public inline function remove(v: String): Bool {
     if (!exists(v))
       return false;
-    length--;
+    _length--;
     return map.remove(v);
   }
 
@@ -38,12 +42,12 @@ class StringSet implements ISet<String> {
 
   public inline function clear(): Void {
     map.clear();
-    length = 0;
+    _length = 0;
   }
 
   public inline function copy(): StringSet {
     final copy = new StringSet();
-    copy.length = length;
+    copy._length = _length;
     copy.map = map.copy();
     return copy;
   }
