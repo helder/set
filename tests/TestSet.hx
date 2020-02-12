@@ -1,3 +1,5 @@
+import set.Set;
+
 enum TestEnum {
   A;
   B(value: Int);

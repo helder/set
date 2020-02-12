@@ -4,8 +4,8 @@
   "tags": ["set"],
   "classPath": "src",
   "contributors": ["benmerckx"],
-  "releasenote": "Reset length in clear",
-  "version": "0.0.2",
+  "releasenote": "Move to set package",
+  "version": "0.1.0",
   "dependencies": {},
   "url": "https://github.com/benmerckx/set"
 }

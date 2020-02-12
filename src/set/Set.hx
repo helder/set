@@ -1,4 +1,4 @@
-import set.*;
+package set;
 
 @:multiType(@:followWithAbstracts V)
 abstract Set<V>(ISet<V>) {
