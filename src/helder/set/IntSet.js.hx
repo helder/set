@@ -1,6 +1,6 @@
-package set;
+package helder.set;
 
-import python.Set;
+import js.lib.Set;
 
 class IntSet implements ISet<Int> {
   final set: Set<Int>;
@@ -8,14 +8,14 @@ class IntSet implements ISet<Int> {
   public var length(get, never): Int;
 
   public inline function new(?values: Iterable<Int>) {
-    set = switch values {
-      case null: new Set();
-      case it: new Set([for (v in it) v]);
-    }
+    set = new Set(switch values {
+      case null: null;
+      case it: [for (v in it) v];
+    });
   }
 
   public inline function get_length(): Int
-    return set.length;
+    return set.size;
 
   public inline function add(v: Int): Void
     set.add(v);
@@ -23,15 +23,11 @@ class IntSet implements ISet<Int> {
   public inline function exists(v: Int): Bool
     return set.has(v);
 
-  public inline function remove(v: Int): Bool {
-    if (!exists(v))
-      return false;
-    set.remove(v);
-    return true;
-  }
+  public inline function remove(v: Int): Bool
+    return set.delete(v);
 
   public inline function iterator(): Iterator<Int>
-    return set.iterator();
+    return new js.lib.HaxeIterator(set.values());
 
   public inline function clear(): Void
     set.clear();

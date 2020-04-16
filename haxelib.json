@@ -1,11 +1,11 @@
 {
-  "name": "set",
+  "name": "helder.set",
   "license": "MIT",
   "tags": ["set"],
   "classPath": "src",
   "contributors": ["benmerckx"],
-  "releasenote": "Move to set package",
-  "version": "0.1.0",
+  "releasenote": "Move to helder package",
+  "version": "0.3.0",
   "dependencies": {},
-  "url": "https://github.com/benmerckx/set"
+  "url": "https://github.com/helder/set"
 }

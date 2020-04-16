@@ -1,4 +1,4 @@
-package set;
+package helder.set;
 
 interface ISet<V> {
   var length(get, never): Int;

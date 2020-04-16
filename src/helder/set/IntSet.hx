@@ -1,12 +1,12 @@
-package set;
+package helder.set;
 
-class EnumValueSet<V:EnumValue> implements ISet<V> {
+class IntSet implements ISet<Int> {
   public var length(get, never): Int;
 
-  var map: Map<V, Bool>;
+  var map: Map<Int, Bool>;
   var _length(default, null): Int;
 
-  public inline function new(?values: Iterable<V>) {
+  public inline function new(?values: Iterable<Int>) {
     map = new Map();
     _length = 0;
     switch values {
@@ -20,24 +20,24 @@ class EnumValueSet<V:EnumValue> implements ISet<V> {
   public inline function get_length(): Int
     return _length;
 
-  public inline function add(v: V): Void {
+  public inline function add(v: Int): Void {
     if (exists(v))
       return;
     _length++;
     map.set(v, true);
   }
 
-  public inline function exists(v: V): Bool
+  public inline function exists(v: Int): Bool
     return map.exists(v);
 
-  public inline function remove(v: V): Bool {
+  public inline function remove(v: Int): Bool {
     if (!exists(v))
       return false;
     _length--;
     return map.remove(v);
   }
 
-  public inline function iterator(): Iterator<V>
+  public inline function iterator(): Iterator<Int>
     return map.keys();
 
   public inline function clear(): Void {
@@ -45,14 +45,14 @@ class EnumValueSet<V:EnumValue> implements ISet<V> {
     _length = 0;
   }
 
-  public inline function copy(): EnumValueSet<V> {
-    final copy = new EnumValueSet();
+  public inline function copy(): IntSet {
+    final copy = new IntSet();
     copy._length = _length;
     copy.map = map.copy();
     return copy;
   }
 
-  public inline function toArray(): Array<V>
+  public inline function toArray(): Array<Int>
     return [for (v in map.keys()) v];
 
   public inline function toString(): String {

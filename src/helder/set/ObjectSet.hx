@@ -1,4 +1,4 @@
-package set;
+package helder.set;
 
 class ObjectSet<V:{}> implements ISet<V> {
   public var length(get, never): Int;

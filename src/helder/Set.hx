@@ -1,4 +1,6 @@
-package set;
+package helder;
+
+import helder.set.*;
 
 @:multiType(@:followWithAbstracts V)
 abstract Set<V>(ISet<V>) {

@@ -1,4 +1,4 @@
-package set;
+package helder.set;
 
 import js.lib.Set;
 
