@@ -14,5 +14,5 @@ jobs:
       - run: yarn lix travix python
       - run: yarn lix travix node
       - run: yarn lix travix java
-      - run: yarn lix travix cpp
-      - run: yarn lix travix cs
+      # - run: yarn lix travix cpp
+      # - run: yarn lix travix cs
