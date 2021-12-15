@@ -256,10 +256,10 @@ lazystream@^1.0.0:
   dependencies:
     readable-stream "^2.0.5"
 
-lix@^15.6.0-alpha.4:
-  version "15.6.0-alpha.4"
-  resolved "https://registry.yarnpkg.com/lix/-/lix-15.6.0-alpha.4.tgz#640eb3c093f11ccc926265f4b342dfd164a250f2"
-  integrity sha512-RxJ8qs9Oc+coniDEZa/7mvmxlIcYYa7kzUqrmvLSmgljAWrWtHLQd+LmSbhv0gWfdhQzvZxLr84R1gHZBOUPdQ==
+lix@^15.11.4:
+  version "15.11.4"
+  resolved "https://registry.yarnpkg.com/lix/-/lix-15.11.4.tgz#368b2262d6625ee684588138446e4a3ff3cdc2c4"
+  integrity sha512-OVoBQu2nvFqE1nXjnVh2mHzOqP1F+c5ehtleJfHglRCnHgdWPM2aAIQFEngjEG4eqeAiw2rdQQhGQs+1Q6gO+w==
 
 locate-path@^3.0.0:
   version "3.0.0"
