@@ -52,11 +52,11 @@ abstract Set<V>(ISet<V>) {
     return new ObjectSet<V>(values);
 
   @:from static inline function fromStringSet<V>(set: StringSet): Set<String>
-    return set;
+    return cast set;
 
   @:from static inline function fromIntSet<V>(set: IntSet): Set<Int>
-    return set;
+    return cast set;
 
   @:from static inline function fromObjectSet<V: {}>(set: ObjectSet<V>): Set<V>
-    return set;
+    return cast set;
 }
