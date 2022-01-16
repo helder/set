@@ -18,3 +18,11 @@ abstract Set<V> {
   function clear(): Void;
 }
 ```
+
+## Usage example
+
+```
+final s = new set.Set<Int>([5, 6, 5]);
+s.add(7);
+trace(s.toArray());
+```
