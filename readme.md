@@ -27,3 +27,10 @@ abstract Set<V> {
 Install the library and add `-lib helder.set` to your hxml.
 
 > **Note:** An earlier version of this library was published to haxelib under the name "set" and will not receive new updates.
+
+```haxe
+import helder.Set;
+final set = new Set<Int>([5, 6, 5]);
+set.add(7);
+trace(set.toArray()); // [5, 6, 7]
+```
