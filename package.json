@@ -5,7 +5,7 @@
     "postinstall": "lix download"
   },
   "devDependencies": {
-    "bestzip": "^2.1.5",
-    "lix": "^15.11.4"
+    "bestzip": "^2.2.0",
+    "lix": "^15.11.6"
   }
 }

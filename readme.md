@@ -5,6 +5,7 @@
 `Set<V>` using a `Map<V, Bool>` implementation.
 
 ```haxe
+package helder;
 abstract Set<V> {
   final length: Int;
   function new(?values: Iterable<V>);
@@ -18,3 +19,11 @@ abstract Set<V> {
   function clear(): Void;
 }
 ```
+
+## Usage
+
+<pre><a href="https://github.com/lix-pm/lix.client">lix</a> +lib helder.set</pre>
+
+Install the library and add `-lib helder.set` to your hxml.
+
+> **Note:** An earlier version of this library was published to haxelib under the name "set" and will not receive new updates.
